@@ -1,6 +1,6 @@
 import './style.css';
 
-function Todo({todo}) {
+function Todo({todo, setTodos, onDeleteHanlder, onToggleHandler}) {
     return (
       <div className='todo-item'>
         <div className='item-contents'>
@@ -8,8 +8,8 @@ function Todo({todo}) {
             <p>{todo.memo}</p>
         </div>
         <div className='item-buttons'>
-            <button>삭제하기</button>
-            <button>완료</button>
+            <button onClick={() => onDeleteHanlder(todo.id)}>삭제하기</button>
+            <button onClick={() => onToggleHandler(todo.id)}>{todo.isDone? "취소":"완료"}</button>
         </div>
       </div>
     );

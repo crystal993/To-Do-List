@@ -3,12 +3,16 @@ import './style.css';
 import Todo from "../todo/Todo";
 
 function List({todos, setTodos}) {
-  const onDeleteHanlder = () => {
-
+  const onDeleteHanlder = (todoId) => {
+    const newToDos = todos.filter((todo)=>{
+      return todo.id !== todoId;
+    });
+    setTodos(newToDos);
   }
 
-  const onEditHandler = () => {
-
+  const onToggleHandler = (todoId) => {
+    const newToDos = todos.map(todo => todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo)
+    setTodos(newToDos);
   }
 
     return (
@@ -23,7 +27,7 @@ function List({todos, setTodos}) {
                     key={todo.id}
                     setTodos={setTodos}
                     onDeleteHanlder={onDeleteHanlder}
-                    onEditHandler={onEditHandler}
+                    onToggleHandler={onToggleHandler}
                   />
                 );
               } else {
@@ -45,7 +49,7 @@ function List({todos, setTodos}) {
                         key={todo.id}
                         setTodos={setTodos}
                         onDeleteHanlder={onDeleteHanlder}
-                        onEditHandler={onEditHandler}
+                        onToggleHandler={onToggleHandler}
                       />
                     );
                   } else {
