@@ -5,6 +5,8 @@ import Layout from "../layout/Layout";
 import List from "../list/List";
 
 function TodoList() {
+
+    // 전체 todo-list를 관리할 state
     const [todos, setTodos] = useState([
         {
           id: 1,

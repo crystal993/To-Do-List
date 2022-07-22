@@ -10,14 +10,15 @@ function Form({ setTodos, todos }) {
         isDone: false,
     };
 
+    // form에서 입력되는 데이터만 담은 state
     const [todo, setTodo] = useState(initialState);
 
     const onChangeHandler = (e) => {
       const {name, value} = e.target; //e.target에 input에 대한 name이 있으니깐
-      setTodo({ ...todo, [name]: value, id: todos.length + 1 });
+      setTodo({ ...todo, [name]: value, id: todos.length + 1, isDone: false });
     }
   
-    const onClickHandler = (e) => {
+    const onSubmitHandler = (e) => {
       setTodos([...todos, todo]) // [...todos, todo]
       setTodo(initialState);
     }
@@ -31,7 +32,7 @@ function Form({ setTodos, todos }) {
           <label>내용</label>
           <input name="memo" type="text" onChange={onChangeHandler} value={todo.memo}></input>
           </div>
-          <button onClick={onClickHandler}>추가하기</button>
+          <button onClick={onSubmitHandler}>추가하기</button>
         </div>
       </div>
     );
