@@ -6,16 +6,47 @@
 
     margin: 10px;
 
-    border: 1px solid green;
+    border: 1px solid #017573;
     border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: rgb(38, 37, 37);
 }
 
 .item-contents{
     text-align: left;
+}
+
+.item-buttons button {
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #256449;
+    width: 100px;
+}
+
+.item-buttons button:nth-child(1) {
+    background-color: white;
+    border: 1px solid #e02b27;
+}
+
+.item-buttons button:nth-child(1):hover {
+    background-color: #e02b27;
+    border: 1px solid white;
+    color: white;
+}
+
+.item-buttons button:nth-child(2):hover {
+    background-color: #017573;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
 }
