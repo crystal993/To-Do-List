@@ -4,9 +4,7 @@ import Todo from "../todo/Todo";
 
 function List({todos, setTodos}) {
   const onDeleteHanlder = (todoId) => {
-    const newToDos = todos.filter((todo)=>{
-      return todo.id !== todoId;
-    });
+    const newToDos = todos.filter((todo)=>todo.id !== todoId);
     setTodos(newToDos);
   }
 
@@ -25,7 +23,6 @@ function List({todos, setTodos}) {
                   <Todo
                     todo={todo}
                     key={todo.id}
-                    setTodos={setTodos}
                     onDeleteHanlder={onDeleteHanlder}
                     onToggleHandler={onToggleHandler}
                   />
@@ -47,7 +44,6 @@ function List({todos, setTodos}) {
                       <Todo
                         todo={todo}
                         key={todo.id}
-                        setTodos={setTodos}
                         onDeleteHanlder={onDeleteHanlder}
                         onToggleHandler={onToggleHandler}
                       />
