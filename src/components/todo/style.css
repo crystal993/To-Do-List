@@ -1,0 +1,21 @@
+.todo-item {
+    box-sizing: border-box;
+
+    width: 22%;
+    height: 200px;
+
+    margin: 10px;
+
+    border: 1px solid green;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.item-contents{
+    text-align: left;
+}

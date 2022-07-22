@@ -2,8 +2,8 @@ import './style.css';
 
 function Header() {
     return (
-      <div class="header-container">
-        <p>My Todo List</p>
+      <div className='header-container'>
+        <p className='title'>My Todo List</p>
       </div>
     );
   }

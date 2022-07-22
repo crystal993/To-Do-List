@@ -1,5 +1,14 @@
 .list-container {
     width: 100vw;
-    background-color: rgb(238, 236, 189);
+    background-color: rgb(255, 255, 255);
     height: 250px;
+    margin: 0px 20px;
+}
+
+.to-do-container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
 }

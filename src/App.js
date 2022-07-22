@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import './App.css';
-import Layout from "./components/layout/Layout";
+import TodoList from "./components/pages/TodoList";
+
 
 function App() {
   return (
     <div className="style-app">
-      <Layout/>
+      <TodoList/>
     </div>
   );
 }
