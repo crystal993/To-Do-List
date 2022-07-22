@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import './style.css';
 import List from "../list/List";
 
 function Form({ setTodos, todos }) {
+    
+  const nextId = useRef(0);
     const initialState = {
         id: 0,
         title: "",
@@ -15,7 +17,8 @@ function Form({ setTodos, todos }) {
 
     const onChangeHandler = (e) => {
       const {name, value} = e.target; //e.target에 input에 대한 name이 있으니깐
-      setTodo({ ...todo, [name]: value, id: todos.length + 1, isDone: false });
+      setTodo({ ...todo, [name]: value, id: nextId.current, isDone: false });
+      nextId.current += 1;
     }
   
     const onSubmitHandler = (e) => {
