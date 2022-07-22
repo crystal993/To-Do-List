@@ -18,7 +18,7 @@ function Form({ setTodos, todos }) {
     }
   
     const onClickHandler = (e) => {
-      setTodos([...todo, todo])
+      setTodos([...todos, todo]) // [...todos, todo]
       setTodo(initialState);
     }
 

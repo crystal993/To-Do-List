@@ -1,11 +1,11 @@
 import './style.css';
 
-function Todo(props) {
+function Todo({todo}) {
     return (
       <div className='todo-item'>
         <div className='item-contents'>
-            <h2>{props.todo.title}</h2>
-            <p>{props.todo.memo}</p>
+            <h2>{todo.title}</h2>
+            <p>{todo.memo}</p>
         </div>
         <div className='item-buttons'>
             <button>삭제하기</button>

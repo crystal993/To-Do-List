@@ -9,16 +9,7 @@ function List({todos, setTodos}) {
         <div className='to-do-container'>
             { 
               todos.map((todo)=>(
-                <div className='todo-item'>
-                  <div className='item-contents'>
-                      <h2>{todo.title}</h2>
-                      <p>{todo.memo}</p>
-                  </div>
-                  <div className='item-buttons'>
-                      <button>삭제하기</button>
-                      <button>완료</button>
-                  </div>
-                </div>
+                <Todo todo={todo} key={todo.id}></Todo>
               ))
             }
         </div>
@@ -26,16 +17,7 @@ function List({todos, setTodos}) {
         <div className='to-do-container'>
             { 
               todos.map((todo)=>(
-                <div className='todo-item'>
-                  <div className='item-contents'>
-                      <h2>{todo.title}</h2>
-                      <p>{todo.memo}</p>
-                  </div>
-                  <div className='item-buttons'>
-                      <button>삭제하기</button>
-                      <button>완료</button>
-                  </div>
-                </div>
+                <Todo todo={todo} key={todo.id}></Todo>
               ))
             }
         </div>
