@@ -1,0 +1,8 @@
+.style-app {
+    max-width: 1200px;
+    min-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
