@@ -13,3 +13,7 @@
     height: 240px;
     align-items: center;
 }
+
+.item {
+    margin-right: 10px;
+}

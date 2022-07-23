@@ -12,24 +12,20 @@ function List({ setTodoList, todoList }) {
     const newToDos = todoList.map(todo => todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo)
     setTodoList(newToDos);
   }
-
+  
     return (
       <div className='list-container'>
         <h3>Working.. 🔥</h3>
         <div className='to-do-container'>
             {todoList.map((todo) => {
-              if (!todo.isDone) {
-                return (
-                  <Todo
-                    todo={todo}
-                    key={todo.id}
-                    onDeleteHanlder={onDeleteHanlder}
-                    onToggleHandler={onToggleHandler}
-                  />
-                );
-              } else {
-                return null;
-              }
+             return <div className="item"> 
+             {todo.isDone === false && 
+              <Todo
+                todo={todo}
+                key={todo.id}
+                onDeleteHanlder={onDeleteHanlder}
+                onToggleHandler={onToggleHandler}
+              />} </div>
             })}
         </div>
         <h3>Done..!🎉</h3>
@@ -38,22 +34,16 @@ function List({ setTodoList, todoList }) {
             { 
               todoList.map((todo)=>{
                 // eslint-disable-next-line no-lone-blocks
-                {
-                  if(todo.isDone){
-                    return (
+                return <div className="item">
+                {todo.isDone === true && 
                       <Todo
                         todo={todo}
                         key={todo.id}
                         onDeleteHanlder={onDeleteHanlder}
                         onToggleHandler={onToggleHandler}
                       />
-                    );
-                  } else {
-                    return null;
-                  }
-                }
-              })
-            }
+                  }</div>
+              })}
         </div>
       </div>
     );
