@@ -23,13 +23,11 @@ function TodoList() {
       ]);
 
     return (
-      <div>
         <Layout>
-            <Header></Header>
-            <Form todoList={todoList} setTodoList={setTodoList}></Form>
-            <List todoList={todoList} setTodoList={setTodoList}></List>
+            <Header/>
+            <Form todoList={todoList} setTodoList={setTodoList}/>
+            <List todoList={todoList} setTodoList={setTodoList}/>
         </Layout>
-      </div>
     );
   }
   

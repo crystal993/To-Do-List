@@ -1,8 +1,7 @@
 .style-app {
-    max-width: 1200px;
-    min-width: 800px;
-
+    /* 부모 요소의 margin처럼 행동하게 되는데 flex로 바꾸면 괜찮다. */
+    display: inline-flex; /* margin callapse 현상 상쇄 해준다. */
+    height: 100vh; /* vh : 화면 기준 */
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
