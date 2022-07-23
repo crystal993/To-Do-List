@@ -2,10 +2,12 @@ import React, {useRef, useState} from "react";
 import './style.css';
 import List from "../list/List";
 
-function Form({ setTodos, todos }) {
+function Form({ setTodoList, todoList }) {
     
-  const nextId = useRef(0);
-    const initialState = {
+  const nextId = useRef(3);
+
+  // 초기값
+  const initialState = {
         id: 0,
         title: "",
         memo: "",
@@ -22,8 +24,8 @@ function Form({ setTodos, todos }) {
     }
   
     const onSubmitHandler = (e) => {
-      setTodos([...todos, todo]) // [...todos, todo]
-      setTodo(initialState);
+      setTodoList([...todoList, todo]) // [...todos, todo]
+      setTodo(initialState); //input값 초기값으로 다시 세팅
     }
 
     return (

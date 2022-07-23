@@ -2,22 +2,22 @@ import React, {useState} from "react";
 import './style.css';
 import Todo from "../todo/Todo";
 
-function List({todos, setTodos}) {
+function List({ setTodoList, todoList }) {
   const onDeleteHanlder = (todoId) => {
-    const newToDos = todos.filter((todo)=>todo.id !== todoId);
-    setTodos(newToDos);
+    const newToDos = todoList.filter((todo)=>todo.id !== todoId);
+    setTodoList(newToDos);
   }
 
   const onToggleHandler = (todoId) => {
-    const newToDos = todos.map(todo => todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo)
-    setTodos(newToDos);
+    const newToDos = todoList.map(todo => todo.id === todoId ? {...todo, isDone: !todo.isDone} : todo)
+    setTodoList(newToDos);
   }
 
     return (
       <div className='list-container'>
         <h3>Working.. 🔥</h3>
         <div className='to-do-container'>
-            {todos.map((todo) => {
+            {todoList.map((todo) => {
               if (!todo.isDone) {
                 return (
                   <Todo
@@ -36,7 +36,7 @@ function List({todos, setTodos}) {
         {/* <Todo todo={todo} key={todo.id}></Todo> */}
         <div className='to-do-container'>
             { 
-              todos.map((todo)=>{
+              todoList.map((todo)=>{
                 // eslint-disable-next-line no-lone-blocks
                 {
                   if(todo.isDone){

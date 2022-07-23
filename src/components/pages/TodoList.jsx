@@ -7,17 +7,17 @@ import List from "../list/List";
 function TodoList() {
 
     // 전체 todo-list를 관리할 state
-    const [todos, setTodos] = useState([
+    const [todoList, setTodoList] = useState([
         {
           id: 1,
-          title: "리액트 실습",
-          memo: "리액트 기초 공부",
+          title: "과제 완성하기",
+          memo: "리액트 과제!!!!",
           isDone: false,
         },
         {
           id: 2,
-          title: "리액트 과제 화이팅!",
-          memo: "리액트는 쉽지 않다.",
+          title: "밥먹기",
+          memo: "밥",
           isDone: true,
         },
       ]);
@@ -26,8 +26,8 @@ function TodoList() {
       <div>
         <Layout>
             <Header></Header>
-            <Form todos={todos} setTodos={setTodos}></Form>
-            <List todos={todos} setTodos={setTodos}></List>
+            <Form todoList={todoList} setTodoList={setTodoList}></Form>
+            <List todoList={todoList} setTodoList={setTodoList}></List>
         </Layout>
       </div>
     );
